@@ -1,0 +1,101 @@
+<html>
+<head>
+<link href="ASSEST/CSS/style.css" rel="stylesheet">
+
+<title>MULTIMEDIA</title>
+</head>
+<body>
+
+<!--- INSERTING VIDEO --->
+<video width="100%" autoplay muted loop>
+<source src="ASSEST/VIDEO/Intro.mp4" type="video/mp4">
+</video>
+<br><br>
+
+
+<!--- INSERTING AUDIO --->
+<hr>
+<center> <b> INSERTING AUDIO </b></center>
+<hr>
+<br>
+<audio controls>
+<source src="ASSEST/AUDIO/music.mp3" type="audio/mp3">
+</audio>
+<br><br>
+
+<!--- APPLYING JAVA APPLET AUDIO --->
+<hr>
+<center> <b> INSERTING AUDIO </b></center>
+<hr>
+<br>
+<!--- TO CALL THE CSS --->
+<div id="clock">8:10:45</div>
+<!--- TO LINK FOR A CURRENT TIME --->
+<script src="clock2.js"></script>
+<br><br>
+
+<!--- EMBEDDING PDF FILE ---->
+<hr>
+<center> <b> EMBEDDING PDF FILE </b></center>
+<hr>
+<br>
+<center>
+<iframe src="ASSEST/PDF/GUIDELINE_IMD311_2023_Individual.pdf" width="80%" height="1200px">
+</iframe>
+</center>
+<br><br>
+
+<!--- EMBEDDING PDF FILE ---->
+<hr>
+<center> <b> EMBEDDING ANY FILE </b></center>
+<hr>
+<br>
+<center>
+<iframe width="800" height="500" src="https://www.youtube.com/embed/14NHWKwFWaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+<br><br>
+
+<!--- APPLYING MARQUEE ---->
+<hr>
+<marquee direction="down" scrollamount="1"> 
+<center> <h1> THIS IS EXAMPLE OF MARQUEE | MR AIRUL SHAZWAN NORSHAHIMI | WELCOME TO MY VIDEO RESUME"</h1></center>
+
+</marquee>
+<hr>
+<br>
+
+
+<script>
+setInterval(showTime, 1000);
+function showTime() {
+    let time = new Date();
+    let hour = time.getHours();
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    am_pm = "AM";
+  
+    if (hour > 12) {
+        hour -= 12;
+        am_pm = "PM";
+    }
+    if (hour == 0) {
+        hr = 12;
+        am_pm = "AM";
+    }
+  
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+  
+    let currentTime = hour + ":" 
+            + min + ":" + sec + am_pm;
+  
+    document.getElementById("clock")
+            .innerHTML = currentTime;
+}
+showTime();
+</script>
+</body>
+
+
+</html>
